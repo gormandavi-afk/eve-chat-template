@@ -26,42 +26,84 @@ export default function DashboardPage() {
       className="min-h-screen font-sans"
       style={{ background: "var(--dmg-surface-1)", color: "var(--dmg-text-1)" }}
     >
-      {/* ── Top bar ─────────────────────────────────────────────── */}
+      {/* ── Top bar — matches DMGTRADER v3.0 ───────────────────── */}
       <header
-        className="sticky top-0 z-10 flex items-center justify-between border-b px-6 py-3"
+        className="sticky top-0 z-10 flex items-center justify-between border-b px-5 py-3"
         style={{
-          background: "oklch(0.13 0 0 / 88%)",
+          background: "rgba(8,11,18,0.92)",
           borderColor: "var(--dmg-border)",
           backdropFilter: "blur(12px)",
         }}
       >
-        <div className="flex items-center gap-3">
+        {/* Logo: red diamond + DMG (white) + TRADER (blue) + v3.0 badge */}
+        <div className="flex items-center gap-2.5">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <rect width="28" height="28" rx="6" fill="#ef4444" />
+            <path d="M14 5L22 14L14 23L6 14L14 5Z" fill="white" />
+            <path d="M14 10L18 14L14 18L10 14L14 10Z" fill="#ef4444" />
+          </svg>
           <span
-            className="font-mono text-base font-bold tracking-tight"
-            style={{ color: "var(--dmg-amber)" }}
+            className="font-sans text-base font-bold tracking-tight"
+            style={{ color: "var(--dmg-text-1)" }}
           >
-            DMG
-          </span>
-          <span className="font-sans text-base font-semibold" style={{ color: "var(--dmg-text-1)" }}>
-            TRADER
+            DMG<span style={{ color: "var(--dmg-blue)" }}>TRADER</span>
           </span>
           <span
             className="hidden rounded px-1.5 py-0.5 font-mono text-xs sm:inline"
-            style={{ background: "var(--dmg-amber-dim)", color: "var(--dmg-amber)" }}
+            style={{ background: "var(--dmg-blue-dim)", color: "var(--dmg-blue-bright)" }}
           >
-            Robo Soldado V18.0
+            v3.0
           </span>
         </div>
 
-        <div className="flex items-center gap-4 text-xs" style={{ color: "var(--dmg-text-2)" }}>
-          <span className="hidden sm:block">Davi Gorman Miller de Souza</span>
+        {/* Social links + status pill + Entrar CTA */}
+        <div className="flex items-center gap-3">
+          <div className="hidden items-center sm:flex">
+            <a
+              href="https://web.facebook.com/share/1LSiRgPRoQ/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="flex h-8 w-8 items-center justify-center rounded-full"
+              style={{ color: "var(--dmg-text-2)" }}
+            >
+              <Facebook size={16} aria-hidden="true" />
+            </a>
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="flex h-8 w-8 items-center justify-center rounded-full"
+              style={{ color: "var(--dmg-text-2)" }}
+            >
+              <Instagram size={16} aria-hidden="true" />
+            </a>
+            <a
+              href="https://wa.me/5561991728618"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="flex h-8 w-8 items-center justify-center rounded-full"
+              style={{ color: "var(--dmg-text-2)" }}
+            >
+              <MessageCircle size={16} aria-hidden="true" />
+            </a>
+          </div>
           <span
-            className="flex items-center gap-1.5 rounded-full px-3 py-1.5"
+            className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs"
             style={{ background: "var(--dmg-green-dim)", color: "var(--dmg-green)" }}
           >
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-current" />
             Mercado Aberto
           </span>
+          <button
+            type="button"
+            className="rounded-md px-4 py-1.5 text-xs font-semibold"
+            style={{ background: "var(--dmg-blue)", color: "#fff" }}
+          >
+            Entrar
+          </button>
         </div>
       </header>
 
@@ -86,8 +128,8 @@ export default function DashboardPage() {
                 type="button"
                 className="rounded-md px-3 py-1.5 text-xs font-medium"
                 style={{
-                  background: t === "5d" ? "var(--dmg-amber-dim)" : "var(--dmg-surface-3)",
-                  color: t === "5d" ? "var(--dmg-amber)" : "var(--dmg-text-2)",
+                  background: t === "5d" ? "var(--dmg-blue-dim)" : "var(--dmg-surface-3)",
+                  color: t === "5d" ? "var(--dmg-blue-bright)" : "var(--dmg-text-2)",
                 }}
               >
                 {t}
@@ -121,7 +163,7 @@ export default function DashboardPage() {
             label="Fator de Lucro"
             value="2.43x"
             sub="R$2,43 p/ R$1 perdido"
-            accent="amber"
+            accent="blue"
             icon={<ArrowUpRight size={14} />}
             colSpan={2}
           />
@@ -151,7 +193,7 @@ export default function DashboardPage() {
             label="Maior Ganho"
             value="R$ 664"
             sub="Melhor operacao"
-            accent="amber"
+            accent="blue"
             icon={<TrendingUp size={14} />}
           />
           <MetricCard

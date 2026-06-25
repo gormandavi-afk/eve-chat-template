@@ -174,7 +174,7 @@ function AlertSystem() {
       style={{ background: "var(--dmg-surface-2)", borderColor: "var(--dmg-border)" }}
     >
       <div className="mb-4 flex items-center gap-2">
-        <Zap size={14} style={{ color: "var(--dmg-amber)" }} />
+        <Zap size={14} style={{ color: "var(--dmg-blue)" }} />
         <p
           className="text-xs font-medium uppercase tracking-widest"
           style={{ color: "var(--dmg-text-2)" }}
@@ -183,7 +183,7 @@ function AlertSystem() {
         </p>
         <span
           className="ml-auto rounded px-2 py-0.5 text-xs"
-          style={{ background: "var(--dmg-amber-dim)", color: "var(--dmg-amber)" }}
+          style={{ background: "var(--dmg-blue-dim)", color: "var(--dmg-blue-bright)" }}
         >
           Visual + Sonoro
         </span>
@@ -236,7 +236,7 @@ function StrategyFilters() {
       style={{ background: "var(--dmg-surface-2)", borderColor: "var(--dmg-border)" }}
     >
       <div className="mb-4 flex items-center gap-2">
-        <Target size={14} style={{ color: "var(--dmg-amber)" }} />
+        <Target size={14} style={{ color: "var(--dmg-blue)" }} />
         <p
           className="text-xs font-medium uppercase tracking-widest"
           style={{ color: "var(--dmg-text-2)" }}
@@ -279,22 +279,22 @@ function SubscriptionBadge() {
       className="rounded-xl border p-5"
       style={{
         background: "var(--dmg-surface-2)",
-        borderColor: "var(--dmg-amber)",
-        boxShadow: "0 0 0 1px var(--dmg-amber-dim)",
+        borderColor: "var(--dmg-blue)",
+        boxShadow: "0 0 0 1px var(--dmg-blue-dim)",
       }}
     >
       <div className="flex items-start justify-between">
         <div>
           <p
             className="text-xs font-medium uppercase tracking-widest"
-            style={{ color: "var(--dmg-amber)" }}
+            style={{ color: "var(--dmg-blue-bright)" }}
           >
             Plano Atual
           </p>
           <p className="mt-1 text-xl font-bold" style={{ color: "var(--dmg-text-1)" }}>
             Anual
           </p>
-          <p className="mt-0.5 font-mono text-sm" style={{ color: "var(--dmg-amber)" }}>
+          <p className="mt-0.5 font-mono text-sm" style={{ color: "var(--dmg-blue-bright)" }}>
             R$ 119,40
             <span className="text-xs" style={{ color: "var(--dmg-text-3)" }}>
               /mes
@@ -303,7 +303,7 @@ function SubscriptionBadge() {
         </div>
         <span
           className="rounded-full px-2.5 py-1 text-xs font-semibold"
-          style={{ background: "var(--dmg-amber-dim)", color: "var(--dmg-amber)" }}
+          style={{ background: "var(--dmg-blue-dim)", color: "var(--dmg-blue-bright)" }}
         >
           -40%
         </span>
@@ -326,7 +326,7 @@ const edges = [
     icon: <Target size={20} />,
     title: "Disciplina Inabalavel",
     desc: "Sem emocoes, sem hesitacoes. O robo segue a estrategia com precisao cirurgica, 24/5.",
-    accent: "var(--dmg-amber)",
+    accent: "var(--dmg-blue)",
   },
   {
     icon: <CheckCircle2 size={20} />,
@@ -338,7 +338,7 @@ const edges = [
     icon: <ShieldCheck size={20} />,
     title: "Controle Total em Reais",
     desc: "Voce define exatamente quanto quer ganhar e perder por dia. Sem surpresas.",
-    accent: "var(--dmg-amber)",
+    accent: "var(--dmg-blue)",
   },
   {
     icon: <Eye size={20} />,
@@ -355,7 +355,7 @@ function CompetitiveEdge() {
       style={{ background: "var(--dmg-surface-2)", borderColor: "var(--dmg-border)" }}
     >
       <div className="mb-5 flex items-center gap-2">
-        <Users size={14} style={{ color: "var(--dmg-amber)" }} />
+        <Users size={14} style={{ color: "var(--dmg-blue)" }} />
         <p
           className="text-xs font-medium uppercase tracking-widest"
           style={{ color: "var(--dmg-text-2)" }}

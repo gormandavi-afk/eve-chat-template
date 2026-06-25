@@ -10,7 +10,7 @@ interface MetricCardProps {
   trend?: "up" | "down" | "neutral";
   trendValue?: string;
   icon?: ReactNode;
-  accent?: "amber" | "green" | "red" | "neutral";
+  accent?: "amber" | "green" | "red" | "neutral" | "blue";
   large?: boolean;
   colSpan?: 1 | 2;
 }
@@ -31,6 +31,7 @@ export function MetricCard({
     green: "text-[var(--dmg-green)]",
     red: "text-[var(--dmg-red)]",
     neutral: "text-[var(--dmg-text-1)]",
+    blue: "text-[var(--dmg-blue-bright)]",
   }[accent];
 
   const accentBg = {
@@ -38,6 +39,7 @@ export function MetricCard({
     green: "bg-[var(--dmg-green-dim)]",
     red: "bg-[var(--dmg-red-dim)]",
     neutral: "bg-[var(--dmg-surface-3)]",
+    blue: "bg-[var(--dmg-blue-dim)]",
   }[accent];
 
   const trendColor =
