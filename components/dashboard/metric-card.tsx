@@ -12,6 +12,7 @@ interface MetricCardProps {
   icon?: ReactNode;
   accent?: "amber" | "green" | "red" | "neutral";
   large?: boolean;
+  colSpan?: 1 | 2;
 }
 
 export function MetricCard({
@@ -23,6 +24,7 @@ export function MetricCard({
   icon,
   accent = "neutral",
   large = false,
+  colSpan = 1,
 }: MetricCardProps) {
   const accentColor = {
     amber: "text-[var(--dmg-amber)]",
@@ -49,7 +51,11 @@ export function MetricCard({
 
   return (
     <div
-      className={cn("flex flex-col gap-3 rounded-xl border p-4", large && "p-5")}
+      className={cn(
+        "flex flex-col gap-3 rounded-xl border p-4",
+        large && "p-5",
+        colSpan === 2 && "col-span-2",
+      )}
       style={{
         background: "var(--dmg-surface-2)",
         borderColor: "var(--dmg-border)",
